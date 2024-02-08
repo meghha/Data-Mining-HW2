@@ -188,12 +188,12 @@ def question5():
     # Read appropriate section of book chapter 3
 
     # string: one of 'Model 1' or 'Model 2'
-    explain["a"] = ""
-    explain["a explain"] = ""
+    explain["a"] = "Model 2"
+    explain["a explain"] = "Model 2, because it does not exhibit any overfitting, as compared to model 1. Therefore it can be generalised well to unseen data, as its accuracy is higher. The reason for such overfitting in Model 1 is that it is not pruned and the tree is allowed to grow until all the observations occupy leaf nodes."
 
     # string: one of 'Model 1' or 'Model 2'
-    explain["b"] = ""
-    explain["b explain"] = ""
+    explain["b"] = "Model 2"
+    explain["b explain"] = "There is still a fair bit of overfitting observed for model 1, because there is a huge difference in the train and test accuracy. This means the model still cannot generalise well to unseen data."
 
     explain["c similarity"] = ""
     explain["c similarity explain"] = ""
