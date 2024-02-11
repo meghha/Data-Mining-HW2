@@ -67,8 +67,8 @@ def question1():
     entropy_n = -(radon_n_y/radon_n_tot * u.log2(radon_n_y/radon_n_tot) + radon_n_n/radon_n_tot * u.log2(radon_n_n/radon_n_tot))
     weighted_entropy_radon = (radon_y_tot/radon_tot * (entropy_y)) + (radon_n_tot/radon_tot * (entropy_n))
     
-    level1["radon"] = 
-    level1["radon_info_gain"] = 
+    level1["radon"] = 0.76
+    level1["radon_info_gain"] = 0.24
 
     weight_loss_y_y = 4
     weight_loss_y_n = 1
@@ -84,21 +84,21 @@ def question1():
     level1["weight_loss"] = 0.97
     level1["weight_loss_info_gain"] = 0.03
 
-    level2_left["smoking"] = 0.
-    level2_left["smoking_info_gain"] = 0.
-    level2_right["smoking"] = 0.
-    level2_right["smoking_info_gain"] = 0.
+    level2_left["smoking"] = -1
+    level2_left["smoking_info_gain"] = -1
+    level2_right["smoking"] = -1
+    level2_right["smoking_info_gain"] = -1
 
-    level2_left["radon"] = 0.
+    level2_left["radon"] = 0.649
     level2_left["radon_info_gain"] = 0.
 
-    level2_left["cough"] = 0.
+    level2_left["cough"] = 
     level2_left["cough_info_gain"] = 0.
 
     level2_left["weight_loss"] = 0.
     level2_left["weight_loss_info_gain"] = 0.
 
-    level2_right["radon"] = 0.
+    level2_right["radon"] = 0.0
     level2_right["radon_info_gain"] = 0.
 
     level2_right["cough"] = 0.
