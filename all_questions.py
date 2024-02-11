@@ -239,18 +239,18 @@ def question7():
 
     # float
     answer["a, info gain, ID"] = 1
-    answer["b, info gain, Handedness"] = 0.
+    answer["b, info gain, Handedness"] = 0.539
 
     # string: "ID" or "Handedness"
-    answer["c, which attrib"] = ""
+    answer["c, which attrib"] = "ID"
 
     # answer is a float
-    answer["d, gain ratio, ID"] = 0.
-    answer["e, gain ratio, Handedness"] = 0.
+    answer["d, gain ratio, ID"] = 1
+    answer["e, gain ratio, Handedness"] = 1.1322
 
     # string: one of 'ID' or 'Handedness' based on gain ratio
     # choose the attribute with the largest gain ratio
-    answer["f, which attrib"] = ""
+    answer["f, which attrib"] = "Handedness"
 
     return answer
 
