@@ -23,17 +23,66 @@ def question1():
     level2_left = {}
     level2_right = {}
 
-    level1["smoking"] = 0.
-    level1["smoking_info_gain"] = 0.
+    nb_y = 5
+    nb_n = 5
+    ntot = nb_y + nb_n
+    H = -(nb_y/ntot * u.log2(nb_y/ntot) + nb_n/ntot * u.log2(nb_n/ntot))
 
-    level1["cough"] = 0.
-    level1["cough_info_gain"] = 0.
+    smoking_y_y = 4
+    smoking_y_n = 1
+    smoking_n_y = 1
+    smoking_n_n = 4
+    smoking_y_tot =  smoking_y_y + smoking_y_n
+    smoking_n_tot =  smoking_n_y + smoking_n_n
+    smoking_tot = smoking_y_tot + smoking_n_tot
+    entropy_y = -(smoking_y_y/smoking_y_tot * u.log2(smoking_y_y/smoking_y_tot) + smoking_y_n/smoking_y_tot * u.log2(smoking_y_n/smoking_y_tot))
+    entropy_n = -(smoking_n_y/smoking_n_tot * u.log2(smoking_n_y/smoking_n_tot) + smoking_n_n/smoking_n_tot * u.log2(smoking_n_n/smoking_n_tot))
+    weighted_entropy_smoking = (smoking_y_tot/smoking_tot * (entropy_y)) + (smoking_n_tot/smoking_tot * (entropy_n))
+    
+    level1["smoking"] = round(weighted_entropy_smoking,2)
+    level1["smoking_info_gain"] = round(H-weighted_entropy_smoking,2)
 
-    level1["radon"] = 0.
-    level1["radon_info_gain"] = 0.
+    cough_y_y = 4
+    cough_y_n = 1
+    cough_n_y = 1
+    cough_n_n = 4
+    cough_y_tot =  cough_y_y + cough_y_n
+    cough_n_tot =  cough_n_y + cough_n_n
+    cough_tot = cough_y_tot + cough_n_tot
+    entropy_y = -(cough_y_y/cough_y_tot * u.log2(cough_y_y/cough_y_tot) + cough_y_n/cough_y_tot * u.log2(cough_y_n/cough_y_tot))
+    entropy_n = -(cough_n_y/cough_n_tot * u.log2(cough_n_y/cough_n_tot) + cough_n_n/cough_n_tot * u.log2(cough_n_n/cough_n_tot))
+    weighted_entropy_cough = (cough_y_tot/cough_tot * (entropy_y)) + (cough_n_tot/cough_tot * (entropy_n))
 
-    level1["weight_loss"] = 0.0
-    level1["weight_loss_info_gain"] = 0.
+    level1["cough"] = round(weighted_entropy_cough,2)
+    level1["cough_info_gain"] = round(H-weighted_entropy_cough,2)
+
+    radon_y_y = 4
+    radon_y_n = 1
+    radon_n_y = 1
+    radon_n_n = 4
+    radon_y_tot =  radon_y_y + radon_y_n
+    radon_n_tot =  radon_n_y + radon_n_n
+    radon_tot = radon_y_tot + radon_n_tot
+    entropy_y = -(radon_y_y/radon_y_tot * u.log2(radon_y_y/radon_y_tot) + radon_y_n/radon_y_tot * u.log2(radon_y_n/radon_y_tot))
+    entropy_n = -(radon_n_y/radon_n_tot * u.log2(radon_n_y/radon_n_tot) + radon_n_n/radon_n_tot * u.log2(radon_n_n/radon_n_tot))
+    weighted_entropy_radon = (radon_y_tot/radon_tot * (entropy_y)) + (radon_n_tot/radon_tot * (entropy_n))
+    
+    level1["radon"] = round(weighted_entropy_radon,2)
+    level1["radon_info_gain"] = round(H-weighted_entropy_radon,2)
+
+    weight_loss_y_y = 4
+    weight_loss_y_n = 1
+    weight_loss_n_y = 1
+    weight_loss_n_n = 4
+    weight_loss_y_tot =  weight_loss_y_y + weight_loss_y_n
+    weight_loss_n_tot =  weight_loss_n_y + weight_loss_n_n
+    weight_loss_tot = weight_loss_y_tot + weight_loss_n_tot
+    entropy_y = -(weight_loss_y_y/weight_loss_y_tot * u.log2(weight_loss_y_y/weight_loss_y_tot) + weight_loss_y_n/weight_loss_y_tot * u.log2(weight_loss_y_n/weight_loss_y_tot))
+    entropy_n = -(weight_loss_n_y/weight_loss_n_tot * u.log2(weight_loss_n_y/weight_loss_n_tot) + weight_loss_n_n/weight_loss_n_tot * u.log2(weight_loss_n_n/weight_loss_n_tot))
+    weighted_entropy_weight_loss = (weight_loss_y_tot/weight_loss_tot * (entropy_y)) + (weight_loss_n_tot/weight_loss_tot * (entropy_n))
+
+    level1["weight_loss"] = round(weighted_entropy_weight_loss,2)
+    level1["weight_loss_info_gain"] = round(H-weighted_entropy_weight_loss,2)
 
     level2_left["smoking"] = 0.
     level2_left["smoking_info_gain"] = 0.
