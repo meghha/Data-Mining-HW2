@@ -103,18 +103,18 @@ def question3():
     answer = {}
 
     # float
-    answer["(a) Gini, overall"] = 0.
+    answer["(a) Gini, overall"] = 0.5
 
     # float
     answer["(b) Gini, ID"] = 0.0
-    answer["(c) Gini, Gender"] = 0.
-    answer["(d) Gini, Car type"] = 0.
-    answer["(e) Gini, Shirt type"] = 0.
+    answer["(c) Gini, Gender"] = 0.48
+    answer["(d) Gini, Car type"] = 0.1625
+    answer["(e) Gini, Shirt type"] = 0.4914
 
-    answer["(f) attr for splitting"] = ""
+    answer["(f) attr for splitting"] = "Car type"
 
     # Explanatory text string
-    answer["(f) explain choice"] = ""
+    answer["(f) explain choice"] = "I will use Car type attribute to split at the root node, as it has the lowest Gini index or impurity. In other words, as the Gini index quantifies purity of an attribute or set of attributes, such that 0 expresses perfect equality (all elements belong to the same class) and 1 expresses maximal inequality (elements are randomly distributed across various classes), we should choose an attribute that has the lowest Gini."
 
     return answer
 
