@@ -112,8 +112,16 @@ def question1():
     answer["level2_right"] = level2_right
 
     # Fill up `construct_tree``
+    tree = u.BinaryTree("smoking == Yes") 
+    A = tree.insert_left("y <= 10") 
+    B = tree.insert_right("x <= 7.3")
+    A.insert_left("y") 
+    A.insert_right("n") 
+    B.insert_left("n") 
+    B.insert_right("y")
+    
     # tree, training_error = construct_tree()
-    tree = u.BinaryTree("root")  # MUST STILL CREATE THE TREE *****
+    # tree = u.BinaryTree("root")  # MUST STILL CREATE THE TREE *****
     answer["tree"] = tree  # use the Tree structure
     # answer["training_error"] = training_error
     answer["training_error"] = 0.0  
