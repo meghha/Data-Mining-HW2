@@ -238,7 +238,7 @@ def question7():
     answer = {}
 
     # float
-    answer["a, info gain, ID"] = 0.
+    answer["a, info gain, ID"] = 1
     answer["b, info gain, Handedness"] = 0.
 
     # string: "ID" or "Handedness"
