@@ -23,65 +23,16 @@ def question1():
     level2_left = {}
     level2_right = {}
 
-    nb_y = 5
-    nb_n = 5
-    ntot = nb_y + nb_n
-    H = -(nb_y/ntot * u.log2(nb_y/ntot) + nb_n/ntot * u.log2(nb_n/ntot))
-
-    smoking_y_y = 4
-    smoking_y_n = 1
-    smoking_n_y = 1
-    smoking_n_n = 4
-    smoking_y_tot =  smoking_y_y + smoking_y_n
-    smoking_n_tot =  smoking_n_y + smoking_n_n
-    smoking_tot = smoking_y_tot + smoking_n_tot
-    entropy_y = -(smoking_y_y/smoking_y_tot * u.log2(smoking_y_y/smoking_y_tot) + smoking_y_n/smoking_y_tot * u.log2(smoking_y_n/smoking_y_tot))
-    entropy_n = -(smoking_n_y/smoking_n_tot * u.log2(smoking_n_y/smoking_n_tot) + smoking_n_n/smoking_n_tot * u.log2(smoking_n_n/smoking_n_tot))
-    weighted_entropy_smoking = (smoking_y_tot/smoking_tot * (entropy_y)) + (smoking_n_tot/smoking_tot * (entropy_n))
-    
-    level1["smoking"] = 0.72
+    level1["smoking"] = 1 # 0.72
     level1["smoking_info_gain"] = 0.28
 
-    cough_y_y = 4
-    cough_y_n = 1
-    cough_n_y = 1
-    cough_n_n = 4
-    cough_y_tot =  cough_y_y + cough_y_n
-    cough_n_tot =  cough_n_y + cough_n_n
-    cough_tot = cough_y_tot + cough_n_tot
-    entropy_y = -(cough_y_y/cough_y_tot * u.log2(cough_y_y/cough_y_tot) + cough_y_n/cough_y_tot * u.log2(cough_y_n/cough_y_tot))
-    entropy_n = -(cough_n_y/cough_n_tot * u.log2(cough_n_y/cough_n_tot) + cough_n_n/cough_n_tot * u.log2(cough_n_n/cough_n_tot))
-    weighted_entropy_cough = (cough_y_tot/cough_tot * (entropy_y)) + (cough_n_tot/cough_tot * (entropy_n))
-
-    level1["cough"] = 0.97
+    level1["cough"] = -1 # 0.97 
     level1["cough_info_gain"] = 0.03
-
-    radon_y_y = 4
-    radon_y_n = 3
-    radon_n_y = 1
-    radon_n_n = 2
-    radon_y_tot =  radon_y_y + radon_y_n
-    radon_n_tot =  radon_n_y + radon_n_n
-    radon_tot = radon_y_tot + radon_n_tot
-    entropy_y = -(radon_y_y/radon_y_tot * u.log2(radon_y_y/radon_y_tot) + radon_y_n/radon_y_tot * u.log2(radon_y_n/radon_y_tot))
-    entropy_n = -(radon_n_y/radon_n_tot * u.log2(radon_n_y/radon_n_tot) + radon_n_n/radon_n_tot * u.log2(radon_n_n/radon_n_tot))
-    weighted_entropy_radon = (radon_y_tot/radon_tot * (entropy_y)) + (radon_n_tot/radon_tot * (entropy_n))
     
-    level1["radon"] = 0.76
+    level1["radon"] = -1 # 0.76
     level1["radon_info_gain"] = 0.24
 
-    weight_loss_y_y = 4
-    weight_loss_y_n = 1
-    weight_loss_n_y = 1
-    weight_loss_n_n = 4
-    weight_loss_y_tot =  weight_loss_y_y + weight_loss_y_n
-    weight_loss_n_tot =  weight_loss_n_y + weight_loss_n_n
-    weight_loss_tot = weight_loss_y_tot + weight_loss_n_tot
-    entropy_y = -(weight_loss_y_y/weight_loss_y_tot * u.log2(weight_loss_y_y/weight_loss_y_tot) + weight_loss_y_n/weight_loss_y_tot * u.log2(weight_loss_y_n/weight_loss_y_tot))
-    entropy_n = -(weight_loss_n_y/weight_loss_n_tot * u.log2(weight_loss_n_y/weight_loss_n_tot) + weight_loss_n_n/weight_loss_n_tot * u.log2(weight_loss_n_n/weight_loss_n_tot))
-    weighted_entropy_weight_loss = (weight_loss_y_tot/weight_loss_tot * (entropy_y)) + (weight_loss_n_tot/weight_loss_tot * (entropy_n))
-
-    level1["weight_loss"] = 0.97
+    level1["weight_loss"] = -1 # 0.97
     level1["weight_loss_info_gain"] = 0.03
 
     level2_left["smoking"] = -1
@@ -89,22 +40,22 @@ def question1():
     level2_right["smoking"] = -1
     level2_right["smoking_info_gain"] = -1
 
-    level2_left["radon"] = 0.649
+    level2_left["radon"] = -1 #0.649
     level2_left["radon_info_gain"] = 0.
 
-    level2_left["cough"] = 
+    level2_left["cough"] = 1
     level2_left["cough_info_gain"] = 0.
 
-    level2_left["weight_loss"] = 0.
+    level2_left["weight_loss"] = -1
     level2_left["weight_loss_info_gain"] = 0.
 
-    level2_right["radon"] = 0.0
+    level2_right["radon"] = 1
     level2_right["radon_info_gain"] = 0.
 
-    level2_right["cough"] = 0.
+    level2_right["cough"] = -1
     level2_right["cough_info_gain"] = 0.
 
-    level2_right["weight_loss"] = 0.
+    level2_right["weight_loss"] = -1
     level2_right["weight_loss_info_gain"] = 0.
 
     answer["level1"] = level1
@@ -113,12 +64,18 @@ def question1():
 
     # Fill up `construct_tree``
     tree = u.BinaryTree("smoking == Yes") 
-    A = tree.insert_left("y <= 10") 
-    B = tree.insert_right("x <= 7.3")
+    A = tree.insert_left("cough == Yes") 
+    B = tree.insert_right("radon == Yes")
+    A.insert_left("y") 
+    A.insert_left("y") 
+    A.insert_left("y") 
     A.insert_left("y") 
     A.insert_right("n") 
-    B.insert_left("n") 
-    B.insert_right("y")
+    B.insert_left("y") 
+    B.insert_right("n")
+    B.insert_right("n")
+    B.insert_right("n")
+    B.insert_right("n")
     
     # tree, training_error = construct_tree()
     # tree = u.BinaryTree("root")  # MUST STILL CREATE THE TREE *****
