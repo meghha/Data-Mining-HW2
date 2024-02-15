@@ -50,13 +50,13 @@ def question1():
     level2_left["weight_loss_info_gain"] = 0.171
 
     level2_right["radon"] = 1
-    level2_right["radon_info_gain"] = 
+    level2_right["radon_info_gain"] = 0.7219
 
     level2_right["cough"] = -1
-    level2_right["cough_info_gain"] = 0.
+    level2_right["cough_info_gain"] = 0.3219
 
     level2_right["weight_loss"] = -1
-    level2_right["weight_loss_info_gain"] = 
+    level2_right["weight_loss_info_gain"] = 0.7219
 
     answer["level1"] = level1
     answer["level2_left"] = level2_left
