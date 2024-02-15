@@ -67,14 +67,8 @@ def question1():
     A = tree.insert_left("cough == Yes") 
     B = tree.insert_right("radon == Yes")
     A.insert_left("y") 
-    A.insert_left("y") 
-    A.insert_left("y") 
-    A.insert_left("y") 
     A.insert_right("n") 
     B.insert_left("y") 
-    B.insert_right("n")
-    B.insert_right("n")
-    B.insert_right("n")
     B.insert_right("n")
     
     # tree, training_error = construct_tree()
@@ -93,9 +87,9 @@ def question2():
     answer = {}
 
     # Answers are floats
-    answer["(a) entropy_entire_data"] = 0.
+    answer["(a) entropy_entire_data"] = 1.41
     # Infogain
-    answer["(b) x <= 0.2"] = 0.
+    answer["(b) x <= 0.2"] = 1.36
     answer["(b) x <= 0.7"] = 0.
     answer["(b) y <= 0.6"] = 0.
 
