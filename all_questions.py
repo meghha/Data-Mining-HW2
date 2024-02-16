@@ -223,7 +223,7 @@ def question5():
     explain["b"] = "Model 2"
     explain["b explain"] = "There is still a fair bit of overfitting observed for model 1, because there is a huge difference in the train and test accuracy. This means the model still cannot generalise well to unseen data."
 
-    explain["c similarity"] = "Both models employ techniques to minimize model complexity. \"
+    explain["c similarity"] = "Both models employ techniques to minimize model complexity."
     explain["c similarity explain"] = ""
 
     explain["c difference"] = "While MDL seeks to find the simplest model, by minimizing the amount of encoding needed to describe the model and data, Pessimistic error estimate aims to reduce the model complexity, by penalizing the error produced by the nodes in decision tree, it penalizes nodes if the error due to the addition of a node is more than the error due to one training error as a result of that node."
