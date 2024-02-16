@@ -63,9 +63,9 @@ def question1():
     answer["level2_right"] = level2_right
 
     # Fill up `construct_tree``
-    tree = u.BinaryTree("smoking == Yes") 
-    A = tree.insert_left("cough == Yes") 
-    B = tree.insert_right("radon == Yes")
+    tree = u.BinaryTree("smoking") 
+    A = tree.insert_left("cough") 
+    B = tree.insert_right("radon")
     A.insert_left("y") 
     A.insert_right("n") 
     B.insert_left("y") 
@@ -87,10 +87,10 @@ def question2():
     answer = {}
 
     # Answers are floats
-    answer["(a) entropy_entire_data"] = 1.41
+    answer["(a) entropy_entire_data"] = 1.4254
     # Infogain
-    answer["(b) x <= 0.2"] = 1.36
-    answer["(b) x <= 0.7"] = 0.
+    answer["(b) x <= 0.2"] = 0.7219
+    answer["(b) x <= 0.7"] = 
     answer["(b) y <= 0.6"] = 0.
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
