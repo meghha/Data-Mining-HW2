@@ -68,8 +68,8 @@ def question1():
     B = tree.insert_right("radon")
     A.insert_left("y") 
     A.insert_right("n") 
-    B.insert_left("y") 
-    B.insert_right("n")
+    B.insert_left("n") 
+    B.insert_right("y")
     
     # tree, training_error = construct_tree()
     # tree = u.BinaryTree("root")  # MUST STILL CREATE THE TREE *****
@@ -241,21 +241,24 @@ def question6():
     # value of the form "z <= float" where "z" is "x" or "y"
     #  and "float" is a floating point number (notice: <=)
     # The value could also be "A" or "B" if it is a leaf
-    answer["a, level 1"] = ""
-    answer["a, level 2, right"] =""
-    answer["a, level 2, left"] = ""
-    answer["a, level 3, left"] = ""
-    answer["a, level 3, right"] = ""
+    answer["a, level 1"] = "x<=0.5"
+    answer["a, level 2, right"] ="A"
+    answer["a, level 2, left"] = "y<=0.4"
+    answer["a, level 3, left"] = "A"
+    answer["a, level 3, right"] = "B"
 
     # run each datum through the tree. Count the number of errors and divide by number of samples. .
     # Since we have areas: calculate the area that is misclassified (total area is unity)
     # float between 0 and 1
-    answer["b, expected error"] = 0.
+    answer["b, expected error"] = 0.06
 
     # Use u.BinaryTree to define the tree. Create your tree.
     # Replace "root node" by the proper node of the form "z <= float"
-    tree = u.BinaryTree("root note")
-
+    tree = u.BinaryTree("x<=0.5")
+    left = tree.insert_left("y<=0.4")
+    right = tree.insert_right("A")
+    left.insert_left("A")
+    left.insert_right("B")
     answer["c, tree"] = tree
 
     return answer
