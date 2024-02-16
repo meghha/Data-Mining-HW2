@@ -255,10 +255,10 @@ def question6():
     # Use u.BinaryTree to define the tree. Create your tree.
     # Replace "root node" by the proper node of the form "z <= float"
     tree = u.BinaryTree("x<=0.5")
-    left = tree.insert_left("y<=0.4")
-    right = tree.insert_right("A")
-    left.insert_left("A")
-    left.insert_right("B")
+    l = tree.insert_left("y<=0.4")
+    r = tree.insert_right("A")
+    l.insert_left("A")
+    l.insert_right("B")
     answer["c, tree"] = tree
 
     return answer
