@@ -100,14 +100,17 @@ def question2():
     # Answer is an instance of BinaryTree
     tree = u.BinaryTree("x<=0.7")
     l2_node_left = tree.insert_left("y<=0.8")
+    l2_node_left_l3_node_right = l2_node_left.insert_right("x<=0.2")
+    l2_node_left_l3_node_right.insert_left("B")
+    l2_node_left_l3_node_right.insert_right("A")
+    l2_node_left_l3_node_left = l2_node_left.insert_left("x<=0.2")
+    
     l2_node_right = tree.insert_right("y<=0.6")
     l2_node_right.insert_right("A")
-    l3_node_left = l2_node_right.insert_left("y<=0.3")
-    l3_node_left.insert_left("A")
-    l3_node_left.insert_right("C")
-    l3_node_right = l2_node_left.insert_right("x<=0.2")
-    l3_node_left.insert_right("B")
-    l3_node_left.insert_right("A")
+    l2_node_right_l3_node_left = l2_node_right.insert_left("y<=0.3")
+    l2_node_right_l3_node_left.insert_left("A")
+    l2_node_right_l3_node_left.insert_right("C")
+    
     
     
     
