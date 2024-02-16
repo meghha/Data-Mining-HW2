@@ -178,7 +178,7 @@ def question4():
     answer["e: explain"] = ""
 
     answer["f"] = ['continuous','quantitative','ratio']
-    answer["f: explain"] = ""
+    answer["f: explain"] = "Depending on whether sea level is 0 or not, it can either be ratio or interval. I am considering anything at sea level as 0, while below it is negative."
 
     answer["g"] = ['discrete','quantitative','ratio']
     answer["g: explain"] = ""
@@ -192,8 +192,8 @@ def question4():
     answer["j"] = ['discrete','qualitative','ordinal']
     answer["j: explain"] = ""
 
-    answer["k"] = ['continuous','quantitative','interval']
-    answer["k: explain"] = ""
+    answer["k"] = ['continuous','quantitative','ratio']
+    answer["k: explain"] = "Depending on whether, the center can be considered as absolute 0, it can be either ratio or interval. If the centre is not absolute 0 then it is interval. However, if the center is considered as the beginning, then distance is ratio."
 
     answer["l"] = ['continuous','quantitative','ratio']
     answer["l: explain"] = ""
