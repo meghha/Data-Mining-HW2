@@ -160,7 +160,7 @@ def question4():
     #  'quantitative', 'interval', 'ratio'
     # If you have a choice between 'binary' and 'discrete', choose 'binary'
 
-    answer["a"] = ['binary','qualititative','nominal']
+    answer["a"] = ['binary','qualititative','ordinal']
 
     # Explain if there is more than one interpretation. Repeat for the other questions. At least five words that form a sentence.
     answer["a: explain"] = "I chose binary variable because, it is asked in terms of AM or PM. There is no discrete numbers involved."
@@ -186,7 +186,7 @@ def question4():
     answer["h"] = ['discrete','qualitative','nominal']
     answer["h: explain"] = ""
 
-    answer["i"] = ['discrete','qualitative','nominal']
+    answer["i"] = ['discrete','qualitative','ordinal']
     answer["i: explain"] = ""
 
     answer["j"] = ['discrete','qualitative','ordinal']
