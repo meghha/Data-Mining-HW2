@@ -100,7 +100,13 @@ def question2():
     # Answer is an instance of BinaryTree
     tree = u.BinaryTree("x<=0.7")
     A = tree.insert_left("y<=0.8")
-    B = tree.insert_right()
+    B = tree.insert_right("y<=0.6")
+    B.insert_right("A")
+    C = B.insert_left("y<=0.3")
+    C.insert_left("A")
+    C.insert_right("C")
+    
+    
     
     
     answer["(d) full decision tree"] = tree
