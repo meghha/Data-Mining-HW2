@@ -166,13 +166,13 @@ def question4():
     answer["a"] = ['binary','qualititative','nominal']
 
     # Explain if there is more than one interpretation. Repeat for the other questions. At least five words that form a sentence.
-    answer["a: explain"] = ""
+    answer["a: explain"] = "I chose binary variable because, it is asked in terms of AM or PM. There is no discrete numbers involved."
 
     answer["b"] = ['continuous','quantitative','ratio']
     answer["b: explain"] = ""
 
     answer["c"] = ['discrete','qualitative','ordinal']
-    answer["c: explain"] = ""
+    answer["c: explain"] = "Brightness measured by people's judgement can be low, medium, high, which suggests there is an inherent order."
 
     answer["d"] = ['continuous','quantitative','ratio']
     answer["d: explain"] = ""
@@ -183,10 +183,10 @@ def question4():
     answer["f"] = ['continuous','quantitative','ratio']
     answer["f: explain"] = ""
 
-    answer["g"] = ['discrete','qualitative','nominal']
+    answer["g"] = ['discrete','quantitative','ratio']
     answer["g: explain"] = ""
 
-    answer["h"] = ['discrete','quantitative','ratio']
+    answer["h"] = ['discrete','qualitative','nominal']
     answer["h: explain"] = ""
 
     answer["i"] = ['discrete','qualitative','nominal']
