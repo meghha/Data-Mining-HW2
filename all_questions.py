@@ -103,7 +103,11 @@ def question2():
     l2_node_left_l3_node_right = l2_node_left.insert_right("x<=0.2")
     l2_node_left_l3_node_right.insert_left("B")
     l2_node_left_l3_node_right.insert_right("A")
-    l2_node_left_l3_node_left = l2_node_left.insert_left("x<=0.2")
+    l2_node_left_l3_node_left = l2_node_left.insert_left("y<=0.6")
+    l2_node_left_l3_node_left.insert_left("B")
+    l2_node_left_l3_node_right_l4_node = l2_node_left_l3_node_left.insert_right("x<=0.2")
+    l2_node_left_l3_node_right_l4_node.insert_left("C")
+    l2_node_left_l3_node_right_l4_node.insert_right("A")
     
     l2_node_right = tree.insert_right("y<=0.6")
     l2_node_right.insert_right("A")
