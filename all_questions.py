@@ -90,8 +90,8 @@ def question2():
     answer["(a) entropy_entire_data"] = 1.4254
     # Infogain
     answer["(b) x < 0.2"] = 0.1774
-    answer["(b) x <= 0.7"] = 0.5792
-    answer["(b) y <= 0.6"] = 0.3478
+    answer["(b) x < 0.7"] = 0.5792
+    answer["(b) y < 0.6"] = 0.3478
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
     answer["(c) attribute"] = "x=0.7"  
